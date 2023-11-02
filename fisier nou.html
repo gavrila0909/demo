@@ -1,12 +1,93 @@
-<html lang="en">
-<head>
-    
-    <title>Document</title>
-    <b>Dana</b>
-    <p>Mai mult tex</p>
-     <b>Alt titlu</b>
-</head>
-<body>
-    
-</body>
-</html>
+<div class="body">
+<div class="choose-basket">
+    <div><input type="checkbox" id="1">
+    <label for="1">Mar</label></div>
+    <div><input type="checkbox" id="2">
+    <label for="2">Banana</label></div>
+    <div><input type="checkbox" id="3">
+    <label for="3">Pere</label></div>
+</div>
+</div>
+<style>
+    body{
+        width: 200px;
+        height: 200px;
+        background-color: beige;
+        
+    }
+    .choose-basket{
+       display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        gap: 14px;
+    }
+
+
+ .choose-basket input{
+    display: none;
+ }
+ .choose-basket label{
+    width: 16px;
+    height: 16px;
+    color: green;
+    padding-left: 20px;
+    position: relative;
+    display: inline-block;
+ }
+ .choose-basket input[type=checkbox] + label::before{
+    content:"" ;
+    top: 14px;
+    left: 14px;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #fff;
+    background-color: red;
+    cursor: pointer;
+    position: absolute;
+}
+
+.choose-basket input[type=checkbox]:checked + label::before{
+    content:"" ;
+    width: 16px;
+    height: 16px;
+    top: 14px;
+    left: 14px;
+    border: 1.5px solid black;
+    background-color: red;
+    cursor: pointer;
+    position: absolute;
+}
+.choose-basket input[type=checkbox]:checked + label::after{
+    content:"" ;
+    width: 16px;
+    height: 16px;
+    top: 14px;
+    left: 14px;
+    background-image: url(modal-tick.png);
+    background-size: contain;
+    position: absolute;
+}
+
+
+
+
+/*.choose-basket label{
+    display: block;
+    position: absolute;
+    top: 14;
+    right: 14px;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #fff;
+    border-radius: 4px;
+}
+
+.choose-basket input:checked + label{
+    background-position: center;
+    background-image: url(https://goitstudentsworks.github.io/html_bc-55_SuperStasss/assets/icon-check-6ba9f879.svg);
+    background-repeat: no-repeat;
+} */
+ 
+
+
+</style>
