@@ -1,0 +1,212 @@
+<ul class="type-of-products">
+    <li class="choose-basket strawberry-basket">
+        <label>
+            <input type="checkbox" value="checked" name="tick">
+            <span></span>
+         </label>
+      <h3>Strawberry Basket</h3>
+      <p>Plant</p>
+      <picture>
+        <!--Mobile-->
+        <source
+        media="(min-width:300px)"
+        srcset="../images/modal-strawberry-basket-m-1x.png 1x, ../images/modal-strawberry-basket-m-1x.png 2x"/>
+        <!--Tablet-->
+        <source
+        media="(min-width:768px)"
+        srcset="../images/modal-strawberry-basket-t-1x.png 1x, ../images/modal-strawberry-basket-t-1x.png 2x"/>
+        <!--Desktop-->
+        <source
+        media="(min-width:1158px)"
+        srcset="../images/modal-strawberry-basket-d-1x.png 1x, ../images/modal-strawberry-basket-d-1x.png 2x"/>
+        <img src="../images/modal-strawberry-basket-d-1x.png" alt="Strawberry Basket">
+      </picture>
+    </li>
+    <li class="choose-basket apple-basket">
+        <label>
+            <input type="checkbox" value="checked" name="tick">
+            <span></span>
+         </label>
+      <h3>Apple Basket</h3>
+      <p>Plant</p>
+      <picture>
+        <!--Mobile-->
+        <source
+        media="(min-width:300px)"
+        srcset="../images/modal-apple-basket-m-1x.png 1x, ../images/modal-apple-basket-m-1x.png 2x"/>
+        <!--Tablet-->
+        <source
+        media="(min-width:768px)"
+        srcset="../images/modal-apple-basket-t-1x.png 1x, ../images/modal-apple-basket-t-1x.png 2x"/>
+        <!--Desktop-->
+        <source
+        media="(min-width:1158px)"
+        srcset="../images/modal-apple-basket-d-1x.png 1x, ../images/modal-apple-basket-d-1x.png 2x"/>
+        <img src="../images/modal-strawberry-basket-d-1x.png" alt="Apple Basket">
+      </picture>
+    </li>
+    <div class=" choose-basket fruits-basket">
+      
+        <input type="checkbox" value="checked" name="tick" id="3">
+           <label for="3">  </label>
+      <h3>Fruits Basket</h3>
+      <p>Plant</p>
+      <picture>
+        <!--Mobile-->
+        <source
+        media="(min-width:300px)"
+        srcset="../images/modal-fruits-basket-m-1x.png 1x, ../images/modal-fruits-basket-m-1x.png 2x"/>
+        <!--Tablet-->
+        <source
+        media="(min-width:768px)"
+        srcset="../images/modal-fruits-basket-t-1x.png 1x, ../images/modal-fruits-basket-t-1x.png 2x"/>
+        <!--Desktop-->
+        <source
+        media="(min-width:1158px)"
+        srcset="../images/modal-fruits-basket-d-1x.png 1x, ../images/modal-fruits-basket-d-1x.png 2x"/>
+        <img src="../images/modal-fruits-basket-d-1x.png" alt="Fruits Basket">
+      </picture>
+    </div>
+</ul>
+
+
+
+
+
+
+  <style>
+
+/*.choose-basket label{
+    display: inline-block;
+    position: relative;
+}
+.choose-basket label input{
+    display: none;
+}
+.choose-basket label span{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid white;
+    background: #9DC262;
+}
+.choose-basket label input:checked  +.choose-basket label span::before{
+    content:"\002714";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width:8px;
+    height: 8px;
+    background: #9DC262;
+    border-radius: 50%;
+
+}
+ +.choose-basket label span::before{
+    content:"\002714";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width:8px;
+    height: 8px;
+    background: #9DC262;
+    border-radius: 50%;}*/
+   
+
+
+
+
+.choose-basket{
+    position: relative;
+    border-radius: 20px;
+    padding: 20px;
+    width: 295px;
+    height: 119px;
+    transition: box-shadow var(--anim-transition);
+}
+.strawberry-basket{
+    background-color: #F8766B;
+    box-sizing: border-box;
+}
+.apple-basket{
+    background-color: #EDD251;
+    box-sizing: border-box;
+}
+.fruits-basket{
+    background-color:#9DC262;
+    box-sizing: border-box;
+}
+.strawberry-basket picture img{
+    width: 88px;
+    height: 95px;
+    position: absolute;
+    top:16px;
+    right: 20px;
+}
+.apple-basket picture img{
+    width: 109px;
+    height: 95px;
+    position: absolute;
+    top:16px;
+    right: 20px;
+}
+.fruits-basket picture img{
+    width: 107px;
+    height: 95px;
+    position: absolute;
+    top:16px;
+    right: 20px;
+}
+
+.choose-basket input[type=checkbox]{
+    opacity: 0;
+    
+}
+
+
+
+/*Checkbox*/
+.choose-basket input[type=checkbox] + label::before{
+    content:"" ;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 14px;
+    right: 14px;
+    border: 1.5px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+ .strawberry-basket input[type=checkbox] + label::before{
+   background: #F8766B;
+ }
+ .apple-basket input[type=checkbox] + label::before{
+     background: #EDD251;
+ }
+ .fruits-basket input[type=checkbox] + label::before{
+     background: #9DC262;
+ }
+
+.choose-basket input[type=checkbox]:checked + label::after{
+     content:"\002714";
+     position: absolute;
+     width: 16px;
+     height: 16px;
+     top: 14px;
+     right: 14px;
+     color: #fff;
+     background-size: contain;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+
+
+
+
+
+
+
+  </style>
